@@ -29,7 +29,8 @@ def dev_guide(request):
     """
     return render(request, "home_application/dev_guide.html")
 
-
+def helloworld(request):
+    return render(request, 'home_application/helloworld.html')
 def contact(request):
     """
     联系页

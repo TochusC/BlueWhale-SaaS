@@ -14,6 +14,8 @@ specific language governing permissions and limitations under the License.
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from home_application import views
+
 urlpatterns = [
     url(r"^admin/", admin.site.urls),
     url(r"^account/", include("blueapps.account.urls")),
@@ -24,4 +26,5 @@ urlpatterns = [
     # 这里的 mako_application 可以改成你想要的名字
     url(r"^mako/", include("mako_application.urls")),
     url(r"^i18n/", include("django.conf.urls.i18n")),
+    url(r'^helloworld/$', views.helloworld),
 ]
